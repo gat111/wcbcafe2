@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Aspect Ratio Image</title>
+    <style>
+      .image-container {
+        width: 100%;
+        max-width: 600px;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        background-color: #ddd;
+      }
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
+      }
+    </style>
   </head>
-  <style>
-    .box {
-      width: 100px;
-      height: 100px;
-      background: blue;
-      transition: background-color 1s; /* 1秒かけて色を変える */
-    }
-
-    .box:hover {
-      background: red;
-    }
-  </style>
-
   <body>
-    <div class="box">test</div>
+    <div class="image-container">
+      <img src="../images/cover-menu-s.webp" alt="Sample Image" />
+    </div>
   </body>
 </html>
